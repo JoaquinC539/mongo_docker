@@ -1,0 +1,22 @@
+
+services:
+  mongo_latest:
+    image: mongo:latest
+    container_name: mongoLatest     
+    ports:
+      - "27017:27017"
+    networks:
+      - my-network
+    volumes:
+      - mongo-data-latest:/data/db
+
+    
+
+volumes:
+  mongo-data-latest:
+
+networks:
+  my-network:
+    external: true
+      
+    

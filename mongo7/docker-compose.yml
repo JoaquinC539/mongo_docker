@@ -1,8 +1,6 @@
-version: '3.8'
-
 
 services:
-  mongo7.0:
+  mongo_7.0:
     image: mongo:7.0
     container_name: mongo7.0      
     ports:
@@ -12,9 +10,13 @@ services:
     volumes:
       - mongo-data:/data/db
 
+    
+
 volumes:
-  mongo-data:
+ mongo-data:
 
 networks:
   my-network:
+    external: true
+      
     
